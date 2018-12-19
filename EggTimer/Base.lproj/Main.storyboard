@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VK0-en-mti">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="+10" id="4W7-XG-jsC">
+                                        <connections>
+                                            <action selector="increase10Action:" destination="BYZ-38-t0r" id="EgZ-6E-Shz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gRc-re-xoc"/>
+                                    <barButtonItem title="Reset" id="ktf-iF-EXr">
+                                        <connections>
+                                            <action selector="resetAction:" destination="BYZ-38-t0r" id="Xl3-KH-FpE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kDL-Lc-da4"/>
+                                    <barButtonItem title="-10" id="Mrt-AA-ik9">
+                                        <connections>
+                                            <action selector="decrease10Action:" destination="BYZ-38-t0r" id="BEn-z6-MJI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUz-9i-DXT">
+                                <rect key="frame" x="140.5" y="309.5" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.10142523795366287" green="0.17449700832366943" blue="0.6531861424446106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tY-bt-1mr">
+                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="dw3-OA-dIz">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="qUg-Va-8Z8">
+                                            <connections>
+                                                <action selector="stopAction:" destination="BYZ-38-t0r" id="Jkj-6l-Oxj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Cv8-wK-M7d">
+                                            <connections>
+                                                <action selector="startAction:" destination="BYZ-38-t0r" id="XCq-yd-5pO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bUz-9i-DXT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="81a-SY-Jvn"/>
+                            <constraint firstItem="5tY-bt-1mr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e9g-3P-ifd"/>
+                            <constraint firstItem="5tY-bt-1mr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fnn-G0-6qf"/>
+                            <constraint firstItem="5tY-bt-1mr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pSK-cj-Llp"/>
+                            <constraint firstItem="bUz-9i-DXT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uJY-5s-BEw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="bUz-9i-DXT" id="ADh-iJ-qKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
